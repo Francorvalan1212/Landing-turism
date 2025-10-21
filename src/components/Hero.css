@@ -1,0 +1,92 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.hero-video iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* evita clics en el video */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.4); /* oscurece un poco para resaltar el texto */
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 1.5rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero-cta {
+  background: linear-gradient(135deg, #a40e4c, #eac67a);
+  border: none;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  background: linear-gradient(135deg, #eac67a, #a40e4c);
+  color: #fff;
+}
+
+.scroll-indicator {
+  margin-top: 2rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
